@@ -204,7 +204,7 @@ int clock_gettime(clockid_t clk_id, struct timespec *tp);
 
 /* complex operations implementation */
 
-typedef float complex ofi_complex_float;
+typedef float complex ofi_complex_float __attribute__((aligned(sizeof(float complex))));
 typedef double complex ofi_complex_double;
 typedef long double complex ofi_complex_long_double;
 
